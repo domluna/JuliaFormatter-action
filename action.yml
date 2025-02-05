@@ -41,4 +41,4 @@ runs:
       if: ${{ failure() && (inputs.suggestion-label == '' || contains( github.event.pull_request.labels.*.name, inputs.suggestion-label )) }}
       with:
         tool_name: JuliaFormatter
-        fail_on_error: true
+        fail_level: error
